@@ -1,10 +1,6 @@
 streamlit
 scikit-learn
-pandas
-numpy
-joblib
 gdown
-matplotlib
-seaborn
-Pillow
-imbalanced-learn
+pandas
+joblib
+numpy
