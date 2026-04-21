@@ -13,16 +13,11 @@ except Exception as e:
     st.error(f"Error loading model: {e}")
     st.stop()
 
-# Layout
-col1, col2 = st.columns(2)
-
-with col1:
-    sepal_length = st.number_input("Sepal Length (cm)", value=5.10, step=0.1)
-    petal_length = st.number_input("Petal Length (cm)", value=1.40, step=0.1)
-
-with col2:
-    sepal_width = st.number_input("Sepal Width (cm)", value=3.50, step=0.1)
-    petal_width = st.number_input("Petal Width (cm)", value=0.20, step=0.1)
+# Measurements must stay in the same order used when the model was trained.
+sepal_length = st.number_input("Sepal Length (cm)", value=5.10, step=0.1)
+sepal_width = st.number_input("Sepal Width (cm)", value=3.50, step=0.1)
+petal_length = st.number_input("Petal Length (cm)", value=1.40, step=0.1)
+petal_width = st.number_input("Petal Width (cm)", value=0.20, step=0.1)
 
 # Prediction
 if st.button("Identify Species ➜"):
